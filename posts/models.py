@@ -19,3 +19,6 @@ class Post(models.Model):
 class Vote (models.Model):
     voter = models.ForeignKey(User,on_delete=CASCADE)
     post = models.ForeignKey(Post,on_delete=CASCADE)
+
+    def __str__(self):
+        return str(self.voter)
